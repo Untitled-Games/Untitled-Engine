@@ -14,6 +14,9 @@ project "Untitled-Engine"
     targetdir ("%{wks.location}/Bin/" .. outputdir .. "/%{prj.name}")
     objdir ("%{wks.location}/Bin-Intermediate/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "uepch.h"
+    pchsource "%{prj.location}/Src/uepch.cpp"
+
     files {
         "%{prj.location}/Src/**.h",
         "%{prj.location}/Src/**.cpp",
