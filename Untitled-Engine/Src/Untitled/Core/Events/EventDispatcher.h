@@ -10,8 +10,7 @@
 
 namespace ue {
 	
-	class EventDispatcher
-	{
+	class EventDispatcher {
 		template<typename T>
 		using EventFunction = std::function<bool(T&)>;
 	public:
