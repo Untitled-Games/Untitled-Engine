@@ -8,7 +8,14 @@
 
 #pragma once
 
-#include "Untitled/Core/Application.h"
+namespace ue {
 
-/* Entry Point */
-#include "Untitled/Core/EntryPoint.h"
+    class Application {
+    public:
+        int Run();
+    };
+
+    // To be defined in client application
+    extern Application* CreateApplication();
+
+}

@@ -6,9 +6,14 @@
  * [+ :]
  */
 
-#pragma once
+#include "uepch.h"
 
-#include "Untitled/Core/Application.h"
+#include "Application.h"
 
-/* Entry Point */
-#include "Untitled/Core/EntryPoint.h"
+namespace ue {
+
+    int Application::Run() {
+        return 1;
+    }
+
+}
