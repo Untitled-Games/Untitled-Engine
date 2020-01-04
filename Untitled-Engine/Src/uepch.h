@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "Untitled/Core/Log.h"
+
 #include <iostream>
 #include <memory>
 #include <utility>

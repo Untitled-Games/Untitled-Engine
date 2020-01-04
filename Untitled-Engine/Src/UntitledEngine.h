@@ -7,6 +7,7 @@
 #pragma once
 
 #include "Untitled/Core/Application.h"
+#include "Untitled/Core/Log.h"
 
 /* Entry Point */
 #include "Untitled/Core/EntryPoint.h"

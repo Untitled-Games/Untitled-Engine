@@ -10,7 +10,7 @@
 class Sandbox : public ue::Application {
 public:
 	Sandbox() {
-		std::cout << "Starting UE Application..." << std::endl;
+		UE_APP_TRACE("Starting UE Application...");
 	}
 };
 
