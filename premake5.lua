@@ -5,36 +5,36 @@
 -- [+ :]
 
 workspace "Untitled-Engine"
-    architecture "x64"
+	architecture "x64"
 
-    configurations {
-        "Debug",
-        "Release",
-        "Dist"
-    }
+	configurations {
+		"Debug",
+		"Release",
+		"Dist"
+	}
 
-    startproject "Sandbox"
+	startproject "Sandbox"
 
-    outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+	outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-    -- Include dependencies --
-    if not ue_root_dir then
-        ue_root_dir = "%{wks.location}/Untitled-Engine"
-    end
+	-- Include dependencies --
+	if not ue_root_dir then
+		ue_root_dir = "%{wks.location}/Untitled-Engine"
+	end
 
-    includes = {}
-    includes["spdlog"] = (ue_root_dir .. "/Dependencies/SpdLog/include")
-    includes["glfw"] = (ue_root_dir .. "/Dependencies/GLFW/include")
-    includes["glm"] = (ue_root_dir .. "/Dependencies/GLM")
-    includes["tinyobjloader"] = (ue_root_dir .. "/Dependencies/TinyObjLoader")
+	includes = {}
+	includes["spdlog"] = (ue_root_dir .. "/Dependencies/SpdLog/include")
+	includes["glfw"] = (ue_root_dir .. "/Dependencies/GLFW/include")
+	includes["glm"] = (ue_root_dir .. "/Dependencies/GLM")
+	includes["tinyobjloader"] = (ue_root_dir .. "/Dependencies/TinyObjLoader")
 
-    -- Dependency projects --
-    include "Configuration/Premake/GLFW.lua"
+	-- Dependency projects --
+	include "Configuration/Premake/GLFW.lua"
 
-    -- Untitled Engine project --
-    -- Requires: glfw
-    include "Configuration/Premake/Untitled-Engine.lua"
+	-- Untitled Engine project --
+	-- Requires: glfw
+	include "Configuration/Premake/Untitled-Engine.lua"
 
-    -- Sandbox project --
-    -- Requires: Untitled-Engine
-    include "Configuration/Premake/Sandbox.lua"
+	-- Sandbox project --
+	-- Requires: Untitled-Engine
+	include "Configuration/Premake/Sandbox.lua"
