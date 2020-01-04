@@ -1,21 +1,19 @@
-/*
- * Copyright (c) 2020 [Untitled Games]
- * This file is subject to the terms and conditions defined in
- * file 'LICENSE', which is part of this source code package.
- *
- * [+ :]
- */
+// Copyright (c) 2020 [Untitled Games]
+// This file is subject to the terms and conditions defined in
+// file 'LICENSE', which is part of this source code package.
+// 
+// [+ :]
 
 #pragma once
 
 namespace ue {
 
-    class Application {
-    public:
-        int Run();
-    };
+	class Application {
+	public:
+		int Run();
+	};
 
-    // To be defined in client application
-    extern Application* CreateApplication();
+	// To be defined in client application
+	extern Application* CreateApplication();
 
 }

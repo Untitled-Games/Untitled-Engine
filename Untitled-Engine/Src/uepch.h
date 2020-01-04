@@ -1,10 +1,8 @@
-/*
- * Copyright (c) 2020 [Untitled Games]
- * This file is subject to the terms and conditions defined in
- * file 'LICENSE', which is part of this source code package.
- *
- * [+ :]
- */
+// Copyright (c) 2020 [Untitled Games]
+// This file is subject to the terms and conditions defined in
+// file 'LICENSE', which is part of this source code package.
+// 
+// [+ :]
 
 #pragma once
 
@@ -21,5 +19,5 @@
 #include <unordered_set>
 
 #ifdef UE_PLATFORM_WINDOWS
-    #include <Windows.h>
+#include <Windows.h>
 #endif
