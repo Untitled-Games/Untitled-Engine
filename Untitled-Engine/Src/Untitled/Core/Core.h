@@ -6,10 +6,6 @@
 
 #pragma once
 
-#ifndef UE_PLATFORM_WINDOWS
-#error Untitled Engine currently only supports Windows
-#endif
-
 #ifdef UE_DEBUG
 #define UE_ENABLE_ASSERTS
 #endif

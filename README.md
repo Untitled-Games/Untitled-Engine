@@ -19,4 +19,4 @@ git submodule update
 ## Premake
 This project uses [premake](https://github.com/premake/premake-core) to generate desired project files.
 
-```generate_vs2017.bat``` or ```generate_vs2019.bat``` scripts can be used to generate a Visual Studio solution.
+```Generate_vs2017.bat``` or ```Generate_vs2019.bat``` scripts can be used to generate a Visual Studio solution.

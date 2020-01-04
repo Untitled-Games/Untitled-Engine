@@ -32,13 +32,13 @@ namespace ue {
 #define UE_LOG_INFO(...)     ::ue::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define UE_LOG_WARN(...)     ::ue::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define UE_LOG_ERROR(...)    ::ue::Log::GetCoreLogger()->error(__VA_ARGS__)
-#define UE_LOG_FATAL(...)    ::ue::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define UE_LOG_CRITICAL(...) ::ue::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 #define UE_APP_TRACE(...)    ::ue::Log::GetAppLogger()->trace(__VA_ARGS__)
 #define UE_APP_INFO(...)     ::ue::Log::GetAppLogger()->info(__VA_ARGS__)
 #define UE_APP_WARN(...)     ::ue::Log::GetAppLogger()->warn(__VA_ARGS__)
 #define UE_APP_ERROR(...)    ::ue::Log::GetAppLogger()->error(__VA_ARGS__)
-#define UE_APP_FATAL(...)    ::ue::Log::GetAppLogger()->fatal(__VA_ARGS__)
+#define UE_APP_CRITICAL(...) ::ue::Log::GetAppLogger()->critical(__VA_ARGS__)
 
 #else
 
@@ -46,12 +46,12 @@ namespace ue {
 #define UE_LOG_INFO(...)
 #define UE_LOG_WARN(...)
 #define UE_LOG_ERROR(...)
-#define UE_LOG_FATAL(...)
+#define UE_LOG_CRITICAL(...)
 
 #define UE_APP_TRACE(...)
 #define UE_APP_INFO(...)
 #define UE_APP_WARN(...)
 #define UE_APP_ERROR(...)
-#define UE_APP_FATAL(...)
+#define UE_APP_CRITICAL(...)
 
 #endif
