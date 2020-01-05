@@ -8,34 +8,30 @@
 
 #include "Event.h"
 
-namespace ue
-{
+namespace ue {
 
-	class KeyEvent : public Event
-	{
+	class KeyEvent : public Event {
 	public:
 		KeyEvent(const int keycode) : m_KeyCode(keycode) {}
 		KeyEvent() = delete;
-		_NODISCARD inline int GetKeyCode() const { return m_KeyCode; }
-		EVENT_CLASS_CATEGORY(int(EventCategory::EventCategoryKeyboard) | int(EventCategory::EventCategoryInput))
+		_NODISCARD int GetKeyCode() const { return m_KeyCode; }
+		_NODISCARD int GetCategoryFlags() const override { return int(EventCategory::EventCategoryKeyboard) | int(EventCategory::EventCategoryInput); }
 	protected:
 		int m_KeyCode;
 	};
 
-	class KeyPressedEvent : public KeyEvent
-	{
+	class KeyPressedEvent : public KeyEvent {
 	public:
 		KeyPressedEvent(const int keycode, const int repeatCount) : KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 		KeyPressedEvent() = delete;
-		_NODISCARD inline int GetRepeatCount() const { return m_RepeatCount; }
+		_NODISCARD int GetRepeatCount() const { return m_RepeatCount; }
 		_NODISCARD std::string ToString() const override;
 		EVENT_CLASS_TYPE(KeyPressed)
 	private:
 		int m_RepeatCount;
 	};
 
-	class KeyReleasedEvent : public KeyEvent
-	{
+	class KeyReleasedEvent : public KeyEvent {
 	public:
 		KeyReleasedEvent(const int keycode) : KeyEvent(keycode) {}
 		KeyReleasedEvent() = delete;
@@ -43,12 +39,12 @@ namespace ue
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
-	class KeyTypedEvent : public KeyEvent
-	{
+	class KeyTypedEvent : public KeyEvent {
 	public:
 		KeyTypedEvent(const int keycode) : KeyEvent(keycode) {}
 		KeyTypedEvent() = delete;
 		_NODISCARD std::string ToString() const override;
 		EVENT_CLASS_TYPE(KeyTyped)
 	};
+
 }

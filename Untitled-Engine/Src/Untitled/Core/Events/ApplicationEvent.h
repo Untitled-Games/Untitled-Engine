@@ -14,7 +14,7 @@ namespace ue {
 	public:
 		WindowClosedEvent() = default;
 		EVENT_CLASS_TYPE(WindowClosed)
-		EVENT_CLASS_CATEGORY(int(EventCategory::EventCategoryApplication))
+		int GetCategoryFlags() const override { return int(EventCategory::EventCategoryApplication); }
 	};
 
 	class WindowResizeEvent : public Event {
@@ -24,7 +24,7 @@ namespace ue {
 		_NODISCARD uint32_t GetHeight() const { return m_Height; }
 		_NODISCARD std::string ToString() const override;
 		EVENT_CLASS_TYPE(WindowResize)
-		EVENT_CLASS_CATEGORY(int(EventCategory::EventCategoryApplication))
+		int GetCategoryFlags() const override { return int(EventCategory::EventCategoryApplication); }
 	private:
 		uint32_t m_Width, m_Height;
 	};
@@ -33,21 +33,21 @@ namespace ue {
 	public:
 		AppTickEvent() = default;
 		EVENT_CLASS_TYPE(AppTick)
-		EVENT_CLASS_CATEGORY(int(EventCategory::EventCategoryApplication))
+		int GetCategoryFlags() const override { return int(EventCategory::EventCategoryApplication); }
 	};
 
 	class AppUpdateEvent : public Event {
 	public:
 		AppUpdateEvent() = default;
 		EVENT_CLASS_TYPE(AppUpdate)
-		EVENT_CLASS_CATEGORY(int(EventCategory::EventCategoryApplication))
+		int GetCategoryFlags() const override { return int(EventCategory::EventCategoryApplication); }
 	};
 
 	class AppRenderEvent : public Event {
 	public:
 		AppRenderEvent() = default;
 		EVENT_CLASS_TYPE(AppRender)
-		EVENT_CLASS_CATEGORY(int(EventCategory::EventCategoryApplication))
+		int GetCategoryFlags() const override { return int(EventCategory::EventCategoryApplication); }
 	};
 
 }
