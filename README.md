@@ -6,7 +6,7 @@ An engine that may or may not be titled!
 ## Cloning the project
 If you wish to clone this project, make sure to clone all the submodules too:
 ```
-git clone --recursive https://github.com/SzyJ/midori_engine
+git clone --recursive https://github.com/Untitled-Games/Untitled-Engine
 ```
 ... or ...
 ```
